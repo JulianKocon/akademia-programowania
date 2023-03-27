@@ -57,7 +57,7 @@ func AttendancePercentage(attendance []bool) float64 {
 // decreased by 1. If the student's attendance is below 60%, average
 // grade is 1 or project grade is 1, the final grade is 1.
 func FinalGrade(s Student) int {
-	attendancePercentage := AttendancePercentage(s.Attendace)
+	attendancePercentage := AttendancePercentage(s.Attendance)
 	averageGrade := AverageGrade(s.Grades)
 	if attendancePercentage < 0.6 || averageGrade == 1 || s.Project == 1 {
 		return 1
